@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:wght@200;300;700&family=Noto+Sans:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Verstappen</title>
+  </head>
+  <body>
+    <header class="sticky">
+      <div class="nav-header">
+        <div class="header-items">
+          <div class="nav-header-item" id="nav-header-image">
+            <a><img id="logo" src="./verstappen-logo.png" /></a>
+            <div id="nav-header-imgTitle">
+              <h2 id="imgTitle">|FANSITE</h2>
+            </div>
+          </div>
+          <div class="nav-header-item">
+            <button class="nav-header-button">
+              <a id="text-header-button" href="">Login</a>
+            </button>
+          </div>
+          <div class="nav-header-item">
+            <button class="nav-header-button">
+              <a id="text-header-button" href="">Video</a>
+            </button>
+          </div>
+          <div class="nav-header-item">
+            <button class="nav-header-button">
+              <a id="text-header-button" href="">Racing</a>
+            </button>
+          </div>
+          <div class="nav-header-item">
+            <button class="nav-header-button">
+              <a id="text-header-button" href="">Service</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-section">
+      <div class="nav-section-item">News</div>
+      <div class="nav-section-item">Calendar</div>
+      <div class="nav-section-item">Merchandising</div>
+    </div>
+
+    <div class="section-news">
+      <div class="article-calendar">
+        <h1 class="Calendar-title">Calendar</h1>
+        <div class="UsGp">
+          <a href=""><img src="./us-flag.png" alt="" class="UsGp-img" /></a>
+          <p class="UsGp-text"></p>
+        </div>
+        <div class="BrasilGp">
+          <a href=""
+            ><img src="./brasil-flag.png" alt="" class="BrasilGp-img"
+          /></a>
+          <p class="BrasilGp-text"></p>
+        </div>
+        <div class="MexicoGp">
+          <a href=""
+            ><img src="./mexico-flag.png" alt="" class="MexicoGp-img"
+          /></a>
+          <p class="MexicoGp-text"></p>
+        </div>
+      </div>
+      <div class="aside-news">
+        <h2 class="new1-title">Mercedes Crash</h2>
+        <p>
+          It was a stellar weekend all around for Russell as he seemed to have
+          his W14 nicely dialled into the freshly paved, 16-turn Lusail
+          International Circuit.
+        </p>
+      </div>
+      <div class="aside-news">
+        <h2 class="new2-title">Verstappen third world champion</h2>
+        <p>
+          Max Verstappen made history in Qatar and put his name amongst some of
+          the greats of F1 by winning his third drivers’ championship. But in
+          such a dominant season, what has been his most impressive quality, and
+          just where does he stand on the list of all-time greats?
+        </p>
+      </div>
+    </div>
+
+    <div class="merchandising">
+      <div class="merc-item">
+        <a href="" class="merc-item-imgContainer"
+          ><img src="./Tshirt.png" alt="" class="item-img"
+        /></a>
+        <p class="merc-item-text">This is the item 1</p>
+      </div>
+      <div class="merc-item">
+        <a href="" class="merc-item-imgContainer"
+          ><img src="./Tshirt.png" alt="" class="item-img"
+        /></a>
+        <p class="merc-item-text">This is the item 2</p>
+      </div>
+      <div class="merc-item">
+        <a href="" class="merc-item-imgContainer"
+          ><img src="./Tshirt.png" alt="" class="item-img"
+        /></a>
+        <p class="merc-item-text">This is the item 3</p>
+      </div>
+      <div class="merc-item">
+        <a href="" class="merc-item-imgContainer"
+          ><img src="./Tshirt.png" alt="" class="item-img"
+        /></a>
+        <p class="merc-item-text">This is the item 4</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-item">
+        <p class="footer-item-text">Terms and conditions</p>
+      </div>
+      <div class="footer-item">
+        <div class="footer-item-linkContainer">
+          <a href="" class="link"></a>Ir al sitio oficial de Verstappen
+        </div>
+      </div>
+      <div class="footer-item">
+        <p class="footer-item-text">Uptc-Colombia</p>
+      </div>
+    </div>
+
+    <script>
+      // Obtener el elemento header y el logo
+      var header = document.querySelector("header");
+      var logo = document.getElementById("logo");
+      var imgTitle = document.getElementById("imgTitle");
+      var textButton = document.getElementById("text-header-button"); // Cambiar el selector por el id correcto
+
+      // Añadir un evento de scroll al window
+      window.addEventListener("scroll", function () {
+        // Obtener la altura del scroll
+        var scroll = window.pageYOffset;
+
+        // Si el scroll es mayor que 50, añadir la clase sticky al header y cambiar el logo
+        if (scroll > 50) {
+          header.classList.add("sticky");
+          logo.src = "./logo-azul.png";
+          imgTitle.style.color = "#003049"; // Usar el signo igual para asignar el valor
+          textButton.style.color = "#003049"; // Usar el signo igual para asignar el valor
+        } else {
+          // Si no, quitar la clase sticky al header y cambiar el logo
+          header.classList.remove("sticky");
+          logo.src = "./logo-blanco.png";
+        }
+      });
+    </script>
+  </body>
+</html>
