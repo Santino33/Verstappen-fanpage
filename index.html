@@ -19,27 +19,27 @@
           <div class="nav-header-item" id="nav-header-image">
             <a><img id="logo" src="./verstappen-logo.png" /></a>
             <div id="nav-header-imgTitle">
-              <h2 id="imgTitle">|FANSITE</h2>
+              <h2 id="text-header">|FANSITE</h2>
             </div>
           </div>
           <div class="nav-header-item">
             <button class="nav-header-button">
-              <a id="text-header-button" href="">Login</a>
+              <a class="text-header" href="">Login</a>
             </button>
           </div>
           <div class="nav-header-item">
             <button class="nav-header-button">
-              <a id="text-header-button" href="">Video</a>
+              <a class="text-header" href="">Video</a>
             </button>
           </div>
           <div class="nav-header-item">
             <button class="nav-header-button">
-              <a id="text-header-button" href="">Racing</a>
+              <a class="text-header" href="">Racing</a>
             </button>
           </div>
           <div class="nav-header-item">
             <button class="nav-header-button">
-              <a id="text-header-button" href="">Service</a>
+              <a class="text-header" href="">Service</a>
             </button>
           </div>
         </div>
@@ -136,8 +136,8 @@
       // Obtener el elemento header y el logo
       var header = document.querySelector("header");
       var logo = document.getElementById("logo");
-      var imgTitle = document.getElementById("imgTitle");
-      var textButton = document.getElementById("text-header-button"); // Cambiar el selector por el id correcto
+      var textImg = document.getElementById("text-header"); // Cambiar el selector por el id correcto
+      var textButtons = document.querySelectorAll(".text-header");
 
       // Añadir un evento de scroll al window
       window.addEventListener("scroll", function () {
@@ -148,12 +148,20 @@
         if (scroll > 50) {
           header.classList.add("sticky");
           logo.src = "./logo-azul.png";
-          imgTitle.style.color = "#003049"; // Usar el signo igual para asignar el valor
-          textButton.style.color = "#003049"; // Usar el signo igual para asignar el valor
-        } else {
+          textImg.style.color = "";
+          textImg.style.color = "#003049"; // Usar el signo igual para asignar el valor
+          textButtons.forEach(function (elemento) {
+            elemento.style.color = "#003049";
+          });
+        } else if (scroll <= 50) {
           // Si no, quitar la clase sticky al header y cambiar el logo
           header.classList.remove("sticky");
           logo.src = "./logo-blanco.png";
+          textImg.style.color = "";
+          textImg.style.color = "#ffffff"; // Volver al color original
+          textButtons.forEach(function (elemento) {
+            elemento.style.color = "#ffffff";
+          });
         }
       });
     </script>
