@@ -37,13 +37,30 @@ header{
     color: var(--colorAzulOscuro);
     transition: color 0.5s;
 }
-.text-header1{
-    color: var(--colorBlanco);
-    transition: color 0.5s;
+
+
+header .nav-header .nav-header-item:hover .nav-header-button {
+    background-color: var(--colorAzulClaro);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el color del texto en estado :hover */
+  header .nav-header .nav-header-item:hover .text-header {
+    color: var(--colorBlanco); /* Cambia al color deseado al hacer hover */
+    transition: color 0.3s ease;
+  }
+  
+  /* Estilos de fondo para los botones cuando el scroll es mayor a 50 */
+  header.sticky .nav-header .nav-header-item:hover .nav-header-button {
+    background-color: var(--colorAzulClaro); /* Cambia al color deseado al hacer scroll */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el color del texto cuando el scroll es mayor a 50 */
+  header.sticky .nav-header .nav-header-item:hover .text-header {
+    color: var(--colorBlanco); /* Cambia al color deseado al hacer scroll */
+    transition: color 0.3s ease;
 }
-
-
-
 
 
 header .nav-header{
