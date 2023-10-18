@@ -15,6 +15,9 @@
     --Monserrat: 'Montserrat', sans-serif;
 }
 
+
+/*HEADER*/
+
 header{
     background-color: var(--colorAzulOscuro);
     width: 100%;
@@ -113,3 +116,45 @@ header .nav-header .nav-header-item .text-header{
     font-weight: 700;
     font-size: 18px;
 }
+
+
+/*CONTENIDO PRINCIPAL*/
+.mainContent{
+    display: flex;
+    flex-wrap: nowrap;
+    background-image: url(./vers1.jpg);
+    background-size: cover; /* Puedes ajustar esta propiedad según tus necesidades */
+    background-position: center; /* Otra propiedad para ajustar la posición de la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.mainContent .nav-section{
+    width: 80%;
+    float: left;
+}
+
+.mainContent .nav-section button{
+    margin-top: 35vh;
+    margin-inline: 4rem;
+
+    background: none;
+    border: none;
+    /* Anula otros estilos como el color del texto y el subrayado */
+    color: inherit;
+    text-decoration: none;
+}
+
+.mainContent .nav-section button a{
+    
+}
+
+.mainContent .nav-section button a img{
+
+}
+
+.mainContent .contentSection{
+    float: right;
+}
+
+
+

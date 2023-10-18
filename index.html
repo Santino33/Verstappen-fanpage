@@ -46,71 +46,81 @@
       </div>
     </header>
 
-    <div class="nav-section">
-      <div class="nav-section-item">News</div>
-      <div class="nav-section-item">Calendar</div>
-      <div class="nav-section-item">Merchandising</div>
-    </div>
+    <div class="mainContent">
+      <div class="nav-section">
+        <button><a href="#merc-title"><img src="./scroll-down.png" alt=""></a></button>
+      </div>
+  
+      <div class="contentSection">
+        <div class="section-news">
+          <div class="aside-news">
+            <h2 id="new1-title">Mercedes Crash</h2>
+            <p>
+              It was a stellar weekend all around for Russell as he seemed to have
+              his W14 nicely dialled into the freshly paved, 16-turn Lusail
+              International Circuit.
+            </p>
+          </div>
+          <div class="aside-news">
+            <h2 id="new2-title">Verstappen third world champion</h2>
+            <p>
+              Max Verstappen made history in Qatar and put his name amongst some of
+              the greats of F1 by winning his third drivers’ championship. But in
+              such a dominant season, what has been his most impressive quality, and
+              just where does he stand on the list of all-time greats?
+            </p>
+          </div>
+          <div class="article-calendar">
+            <h1 id="calendar-title">Calendar</h1>
+            <div class="UsGp">
+              <img src="./us-flag.png" alt="" class="UsGp-img"/>
+              <p class="UsGp-text"></p>
+            </div>
+            <div class="BrasilGp">
+              <a href=""
+                ><img src="./brasil-flag.png" alt="" class="BrasilGp-img"
+              /></a>
+              <p class="BrasilGp-text"></p>
+            </div>
+            <div class="MexicoGp">
+              <a href=""
+                ><img src="./mexico-flag.png" alt="" class="MexicoGp-img"
+              /></a>
+              <p class="MexicoGp-text"></p>
+            </div>
+          </div>
+        </div>
 
-    <div class="section-news">
-      <div class="article-calendar">
-        <h1 class="Calendar-title">Calendar</h1>
-        <div class="UsGp">
-          <a href=""><img src="./us-flag.png" alt="" class="UsGp-img" /></a>
-          <p class="UsGp-text"></p>
-        </div>
-        <div class="BrasilGp">
-          <a href=""
-            ><img src="./brasil-flag.png" alt="" class="BrasilGp-img"
-          /></a>
-          <p class="BrasilGp-text"></p>
-        </div>
-        <div class="MexicoGp">
-          <a href=""
-            ><img src="./mexico-flag.png" alt="" class="MexicoGp-img"
-          /></a>
-          <p class="MexicoGp-text"></p>
-        </div>
-      </div>
-      <div class="aside-news">
-        <h2 class="new1-title">Mercedes Crash</h2>
-        <p>
-          It was a stellar weekend all around for Russell as he seemed to have
-          his W14 nicely dialled into the freshly paved, 16-turn Lusail
-          International Circuit.
-        </p>
-      </div>
-      <div class="aside-news">
-        <h2 class="new2-title">Verstappen third world champion</h2>
-        <p>
-          Max Verstappen made history in Qatar and put his name amongst some of
-          the greats of F1 by winning his third drivers’ championship. But in
-          such a dominant season, what has been his most impressive quality, and
-          just where does he stand on the list of all-time greats?
-        </p>
-      </div>
+
+        
+      </div>     
     </div>
 
     <div class="merchandising">
+      <h1 id="merc-title">Merchandising</h1>
       <div class="merc-item">
+        <h3 class="merc-item-title">TShirt Redbull 2023</h3>
         <a href="" class="merc-item-imgContainer"
           ><img src="./Tshirt.png" alt="" class="item-img"
         /></a>
         <p class="merc-item-text">This is the item 1</p>
       </div>
       <div class="merc-item">
+        <h3 class="merc-item-title">TShirt Redbull 2023</h3>
         <a href="" class="merc-item-imgContainer"
           ><img src="./Tshirt.png" alt="" class="item-img"
         /></a>
         <p class="merc-item-text">This is the item 2</p>
       </div>
       <div class="merc-item">
+        <h3 class="merc-item-title">TShirt Redbull 2023</h3>
         <a href="" class="merc-item-imgContainer"
           ><img src="./Tshirt.png" alt="" class="item-img"
         /></a>
         <p class="merc-item-text">This is the item 3</p>
       </div>
       <div class="merc-item">
+        <h3 class="merc-item-title">TShirt Redbull 2023</h3>
         <a href="" class="merc-item-imgContainer"
           ><img src="./Tshirt.png" alt="" class="item-img"
         /></a>
@@ -127,10 +137,11 @@
           <a href="" class="link"></a>Ir al sitio oficial de Verstappen
         </div>
       </div>
-      <div class="footer-item">
+      <div class= "footer-item">
         <p class="footer-item-text">Uptc-Colombia</p>
       </div>
     </div>
+    
 
     <script>
       // Obtener el elemento header y el logo
@@ -147,12 +158,15 @@
         // Si el scroll es mayor que 50, añadir la clase sticky al header y cambiar el logo
         if (scroll > 50) {
           header.classList.add("sticky");
+          
           logo.src = "./logo-azul.png";
           textImg.style.color = "";
           textImg.style.color = "#003049"; // Usar el signo igual para asignar el valor
+          
           textButtons.forEach(function (elemento) {
             elemento.style.color = "#003049";
           });
+
         } else if (scroll <= 50) {
           // Si no, quitar la clase sticky al header y cambiar el logo
           header.classList.remove("sticky");
