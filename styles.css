@@ -144,17 +144,119 @@ header .nav-header .nav-header-item .text-header{
     text-decoration: none;
 }
 
-.mainContent .nav-section button a{
-    
-}
-
-.mainContent .nav-section button a img{
-
-}
 
 .mainContent .contentSection{
     float: right;
+    margin-top: 10vh;
 }
+
+.mainContent .contentSection .section-news{
+    margin-block: 2vh;
+}
+
+.mainContent .contentSection .section-news .mainNew{
+    background-color: var(--colorBlanco);
+    padding-right: 10vw;
+    padding-left: 5vw;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+}
+
+.mainContent .contentSection .section-news .mainNew p:first-child + h2 {
+    font-family: var(--Monserrat);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.mainContent .contentSection .section-news .mainNew p:first-child{
+    font-family: var(--Monserrat);
+    font-weight: 700;
+}
+
+.mainContent .contentSection .section-news .mainNew p:last-child{
+    font-family: var(--Monserrat);
+    font-weight: 300;
+}
+
+.mainContent .contentSection .section-news .otherNews{
+    margin-top: 5vh;
+    margin-bottom: 12vh;
+}
+
+.new {
+    flex: 1; /* Hace que las noticias ocupen el espacio disponible de manera equitativa */
+    display: flex;
+    
+    margin: 5rem;
+    background-color: var(--colorBlanco);
+    align-items: center;
+}
+
+.new:hover{
+    transition: color ;
+    border: solid 1px var(--colorRojoOscuro);
+    
+}
+
+.new-imgContainer{
+    width: 70%;
+    height: auto;
+    display: flex;
+  justify-content: flex-end;
+} 
+
+.otherNews .new .new-imgContainer img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Esto mantiene la proporción de aspecto y recorta la imagen si es necesario */
+}
+
+.otherNews .new .new-text{
+    font-family: var(--Noto-sans);
+    font-weight: 300;
+    margin: 1rem;
+}
+
+/*CALENDAR*/
+
+.article-calendar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-color: var(--colorAzulOscuro);
+}
+
+.article-calendar .calendar-title{
+
+}
+
+.article-calendar .races{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.article-calendar .races .gp {
+    width: 33%;
+}
+
+.article-calendar .races .gp .flagContainer{
+    width: 70%;
+    height: auto;
+    margin-inline: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.article-calendar .races .gp .flagContainer img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
 
 
 
