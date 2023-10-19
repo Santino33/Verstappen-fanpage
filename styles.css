@@ -291,6 +291,25 @@ header .nav-header .nav-header-item .text-header{
     font-weight: 700;
 }
 
+.footer{
+    height: 100px;
+    background-color: var(--colorAzulOscuro);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-item-linkContainer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer .footer-item p, .footer-item-linkContainer a{
+    font-family: var(--Monserrat);
+    color: var(--colorBlanco)
+}
 
 
 
